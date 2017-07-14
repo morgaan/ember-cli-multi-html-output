@@ -10,5 +10,6 @@
     "ember-addon"
   ],
   "author": "Morgan CUGERONE",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": "https://github.com/morgaan/ember-cli-multi-html-output"
 }
