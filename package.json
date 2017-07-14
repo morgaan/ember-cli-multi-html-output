@@ -1,0 +1,14 @@
+{
+  "name": "ember-cli-multi-html-output",
+  "version": "0.1.0",
+  "description": "This addon lets you, at the end of the application build,  override and/or duplicate and then patch the generated `index.html`, with values you configure in the application options. The values replace placeholders set into  `app/index.html`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ember-addon"
+  ],
+  "author": "Morgan CUGERONE",
+  "license": "ISC"
+}
