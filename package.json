@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-multi-html-output",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "This addon lets you, at the end of the application build,  override and/or duplicate and then patch the generated `index.html`, with values you configure in the application options. The values replace placeholders set into  `app/index.html`.",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,9 @@
   ],
   "author": "Morgan CUGERONE",
   "license": "ISC",
-  "repository": "https://github.com/morgaan/ember-cli-multi-html-output"
+  "repository": "https://github.com/morgaan/ember-cli-multi-html-output",
+  "devDependencies": {
+    "merge-obj": "0.0.3",
+    "shelljs": "^0.7.8"
+  }
 }

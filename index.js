@@ -17,8 +17,10 @@ module.exports = {
 
   postBuild(results) {
 
-    const shell   = this.project.require('shelljs'),
-          targets = this.options.targets;
+    const shell    = this.project.require('shelljs'),
+          merge    = this.project.require('merge-obj'),
+          defaults = this.options.defaults || {},
+          targets  = this.options.targets;
 
     // Backups the index.html into a template.
     shell.cp(results.directory + '/index.html', results.directory + '/index-template.html');
@@ -26,14 +28,15 @@ module.exports = {
     // Generates the alternative index.html files.
     for(let target of targets) {
 
-      const outputFile = `${results.directory}/${target.outputPath}`;
+      const outputFile = `${results.directory}/${target.outputPath}`,
+            macros     = merge(defaults, target.macros);
 
       // Duplicates the template into the outputFile.
       shell.cp(results.directory + '/index-template.html', outputFile);
 
-      for(let macro of Object.keys(target.macros)) {
+      for(let macro of Object.keys(macros)) {
 
-        let replacement = target.macros[macro];
+        let replacement = macros[macro];
 
         // If there is environment specific replacement?
         if(typeof replacement === "object") {
