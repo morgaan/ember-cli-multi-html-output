@@ -10,7 +10,7 @@ The values replace placeholders set into  `app/index.html`.
 ## Installation
 
 ```shell
-ember install ember-cli-multi-html-output
+ember install ember-cli-multi-html-output -D
 ```
 
 ## Usage
@@ -116,3 +116,6 @@ The `index-fr.html` for build `-env development` look like below:
   </body>
 </html>
 ```
+
+`ember build -env DESIRED_ENVIRONMENT` should be generating the different
+targets (i.e `index.html`, `index-fr.html`) in the `/dist` folder.
