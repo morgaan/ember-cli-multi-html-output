@@ -14,6 +14,6 @@
   "repository": "https://github.com/morgaan/ember-cli-multi-html-output",
   "dependencies": {
     "merge-obj": "0.0.3",
-    "shelljs": "^0.7.8"
+    "shelljs": "^0.8.5"
   }
 }
